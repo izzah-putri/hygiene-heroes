@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Materi Ibu Izzah | Hygiene Heroes</title>
+<style>
+:root{--navy:#172b69;--blue:#3988df;--pink:#f36d91;--green:#239b62;--yellow:#ffe36d;--ink:#17234f;--soft:#f4f8ff}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:linear-gradient(135deg,#dff4ff,#f8efff);min-height:100vh}
+header{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:15px 5%;box-shadow:0 3px 15px #17336b18;gap:12px;flex-wrap:wrap}
+.brand{font-size:1.25rem;font-weight:900;color:var(--navy)}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--navy);text-decoration:none;font-weight:700}
+.hero{background:linear-gradient(120deg,#9be0ff,#d9f4ff);text-align:center;padding:28px 16px 32px;position:relative;overflow:hidden}
+.hero .tag{display:inline-block;background:var(--pink);color:white;padding:8px 20px;border-radius:30px;font-weight:800}
+h1{font-size:clamp(2.2rem,6vw,4rem);margin:12px 0 4px;color:var(--navy);text-shadow:2px 3px #fff}
+.hero h2{display:inline-block;background:var(--yellow);padding:10px 26px;border-radius:18px;margin:5px 0;font-size:clamp(1.2rem,3vw,1.8rem)}
+.hero p{font-weight:700;margin-bottom:0}
+main{max-width:1100px;margin:24px auto;padding:0 16px;display:grid;grid-template-columns:210px 1fr;gap:18px}
+aside,.panel{background:#fff;border:2px solid #c5dfff;border-radius:22px;padding:18px;box-shadow:0 7px 20px #1b3b7410}
+aside h3{margin-top:0}.menu{display:block;width:100%;text-align:left;border:0;background:#f1f6ff;padding:12px;border-radius:12px;margin:8px 0;color:var(--navy);font-weight:800;cursor:pointer}
+.menu.active{background:var(--blue);color:#fff}
+.topline{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.pill{background:#e8f1ff;color:var(--blue);padding:8px 14px;border-radius:20px;font-weight:800}
+.score{font-weight:900;color:var(--navy);font-size:1.25rem}
+.progress{height:12px;background:#e5eaf2;border-radius:20px;overflow:hidden;margin:15px 0 22px}.bar{height:100%;background:linear-gradient(90deg,#35b66d,#8ad96b);width:0%;transition:.25s}
+.question{background:#fff1f5;border-radius:18px;padding:22px;margin-bottom:18px}
+.question h2{font-size:1.35rem;margin:0 0 8px}.translation{color:#5c6687;font-style:italic}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.option{padding:15px;border:2px solid #bdc8dc;border-radius:15px;background:#fff;font-weight:800;text-align:left;cursor:pointer;font-size:1rem;color:var(--navy)}
+.option:hover{border-color:var(--blue);background:#f4f8ff}.option:disabled{cursor:default;opacity:1}
+.option.correct{border-color:#55bf78;background:#e6f9e9;color:#155c32}.option.wrong{border-color:#e57b83;background:#fff0f0;color:#9d2929}
+.feedback{display:none;margin-top:18px;padding:18px;border-radius:16px;line-height:1.55}.feedback.show{display:block}.feedback.good{background:#e9faed}.feedback.bad{background:#fff1f1}
+.actions{display:flex;justify-content:space-between;gap:10px;margin-top:20px;flex-wrap:wrap}
+button.primary{border:0;border-radius:25px;padding:13px 24px;background:var(--blue);color:white;font-weight:900;font-size:1rem;cursor:pointer}
+button.secondary{border:2px solid #cbd4e4;border-radius:25px;padding:12px 22px;background:#fff;color:#66718d;font-weight:800;cursor:pointer}
+button:disabled{opacity:.45;cursor:not-allowed}
+.small{font-size:.9rem;color:#66718d}.hide{display:none!important}
+.result{text-align:center;padding:25px}.result .big{font-size:3rem;font-weight:900;color:var(--blue)}
+.review{margin-top:18px;text-align:left}.review details{padding:12px;border-bottom:1px solid #e5eaf2}.review summary{font-weight:800;cursor:pointer}
+.lesson p{line-height:1.6}.lesson code{background:#fff2bd;padding:3px 7px;border-radius:6px;font-weight:800}
+footer{text-align:center;padding:22px;color:#596887;font-weight:700}
+@media(max-width:760px){main{grid-template-columns:1fr}aside{order:2}.options{grid-template-columns:1fr}header{justify-content:center;text-align:center}nav{justify-content:center}.question h2{font-size:1.15rem}}
+</style>
+</head>
+<body>
+<header><div class="brand">📚 Materi Ibu Izzah</div><nav><a href="#beranda">Beranda</a><a href="#materi">Materi</a><a href="#game">Game</a><a href="#pembahasan">Pembahasan</a></nav><strong>English – Grade 6</strong></header>
+<section class="hero" id="beranda"><span class="tag">OUR HYGIENE HABITS</span><h1>🦸 HYGIENE HEROES!</h1><h2>Should or Shouldn't?</h2><p>Let's learn, play, and stay healthy!</p></section>
+<main>
+<aside><h3>🎮 Menu Belajar</h3><button class="menu active" onclick="showSection('game',this)">🎯 Game Quiz</button><button class="menu" onclick="showSection('materi',this)">📖 Materi Singkat</button><button class="menu" onclick="showSection('pembahasan',this)">🔑 Kunci & Pembahasan</button><hr><p class="small">Pilih jawaban yang paling tepat. Setiap jawaban benar bernilai 10 poin.</p></aside>
+<section class="panel" id="game">
+<div id="quiz">
+<div class="topline"><span class="pill" id="counter">Question 1 of 15</span><span class="score">⭐ <span id="score">0</span> pts</span></div>
+<div class="progress"><div class="bar" id="bar"></div></div>
+<div class="question"><h2 id="qtext"></h2><div class="translation" id="qtranslation"></div></div>
+<div class="options" id="options"></div>
+<div class="feedback" id="feedback" aria-live="polite"></div>
+<div class="actions"><button class="secondary" id="restart" onclick="restartQuiz()">↻ Ulangi dari Awal</button><button class="primary" id="next" onclick="nextQuestion()" disabled>Soal Berikutnya →</button></div>
+</div>
+<div class="result hide" id="result"><div style="font-size:3rem">🏆</div><h2>Quiz Completed!</h2><p>Hebat! Kamu sudah menyelesaikan semua pertanyaan.</p><div class="big"><span id="finalscore">0</span>/150</div><h3 id="remark"></h3><p id="resulttext"></p><button class="primary" onclick="restartQuiz()">Main Lagi</button><div class="review" id="review"></div></div>
+</section>
+<section class="panel lesson hide" id="materi">
+<h2>📖 Materi Singkat: Should & Shouldn't</h2>
+<h3>1. Apa itu SHOULD?</h3><p><b>Should</b> adalah modal verb yang digunakan untuk memberikan saran, nasihat, atau anjuran. Artinya: <b>sebaiknya / seharusnya</b>.</p>
+<h3>2. Pola kalimat</h3><p>Positif: <code>Subject + should + Verb 1</code><br>Contoh: You should wash your hands. (Kamu sebaiknya mencuci tangan.)</p><p>Negatif: <code>Subject + shouldn't + Verb 1</code><br>Contoh: You shouldn't eat too much candy. (Kamu sebaiknya tidak makan terlalu banyak permen.)</p><p>Tanya: <code>Should + Subject + Verb 1?</code><br>Contoh: Should I brush my teeth? (Apakah saya sebaiknya menyikat gigi?)</p>
+<h3>3. Ingat!</h3><p>Setelah <b>should</b> dan <b>shouldn't</b>, gunakan kata kerja bentuk dasar (Verb 1). Contoh: <i>should eat</i>, bukan <i>should eats</i>.</p>
+<h3>4. Contoh kebiasaan sehat</h3><ul><li>You should wash your hands. (Kamu sebaiknya mencuci tangan.)</li><li>You should brush your teeth twice a day. (Kamu sebaiknya menyikat gigi dua kali sehari.)</li><li>You should get enough sleep. (Kamu sebaiknya tidur cukup.)</li><li>You shouldn't throw trash on the floor. (Kamu sebaiknya tidak membuang sampah di lantai.)</li></ul>
+<button class="primary" onclick="showSection('game',document.querySelector('.menu'))">Mulai Game →</button>
+</section>
+<section class="panel hide" id="pembahasan"><h2>🔑 Kunci Jawaban & Pembahasan</h2><p>Selesaikan kuis untuk membuka daftar kunci jawaban dan pembahasan lengkap. Kamu juga dapat melihat pembahasan setiap soal segera setelah memilih jawaban.</p><div id="answerkey" class="small">Belum ada hasil kuis.</div></section>
+</main>
+<footer>Materi Ibu Izzah • Learn English • Stay Clean • Stay Healthy!</footer>
+<script>
+const questions = [
+["You should wash your hands before ....","Kamu sebaiknya mencuci tangan sebelum ....",["Sleeping","Eating","Playing","Watching TV"],1,"Kita sebaiknya mencuci tangan sebelum makan untuk menghilangkan kuman. Polanya: should + Verb 1 (wash)."],
+["You ... brush your teeth twice a day.","Kamu sebaiknya menyikat gigi dua kali sehari.",["should","shouldn't","are","is"],0,"Menyikat gigi dua kali sehari merupakan kebiasaan baik. Gunakan should untuk memberikan saran positif."],
+["We ... throw rubbish on the floor.","Kita sebaiknya tidak membuang sampah di lantai.",["should","shouldn't","is","does"],1,"Membuang sampah di lantai adalah kebiasaan buruk. Gunakan shouldn't untuk menyarankan agar tidak melakukannya."],
+["Which sentence is correct?","Manakah kalimat yang benar?",["She should eats vegetables.","She should eating vegetables.","She should eat vegetables.","She should to eat vegetables."],2,"Setelah should, kata kerja harus berbentuk dasar (Verb 1). Gunakan eat, bukan eats, eating, atau to eat."],
+["I am very tired. What should I do?","Saya sangat lelah. Apa yang sebaiknya saya lakukan?",["You should take a rest.","You shouldn't sleep.","You should eat candy.","You shouldn't drink water."],0,"Jika merasa lelah, kita sebaiknya beristirahat. Take a rest berarti beristirahat."],
+["You have a toothache. You should ....","Kamu sakit gigi. Kamu sebaiknya ....",["eat more candy","see a dentist","never brush your teeth","play all day"],1,"Jika sakit gigi, sebaiknya kita pergi ke dokter gigi (dentist)."],
+["What is the negative form of should?","Apa bentuk negatif dari should?",["Shoulds","Shouldn't","Doesn't","Are not"],1,"Bentuk negatif should adalah should not atau singkatnya shouldn't."],
+["... I wash my hands before eating?","... saya mencuci tangan sebelum makan?",["Should","Shouldn't","Am","Does"],0,"Untuk membuat pertanyaan, letakkan should di awal: Should + Subject + Verb 1?"],
+["You shouldn't ... too much junk food.","Kamu sebaiknya tidak terlalu banyak makan makanan cepat saji.",["eats","eating","eat","ate"],2,"Setelah shouldn't, gunakan Verb 1, yaitu eat."],
+["Which one is a good hygiene habit?","Manakah kebiasaan menjaga kebersihan yang baik?",["Never taking a bath","Washing hands regularly","Throwing trash everywhere","Not brushing teeth"],1,"Mencuci tangan secara teratur (washing hands regularly) adalah kebiasaan menjaga kebersihan."],
+["Your classroom is dirty. What should you do?","Ruang kelasmu kotor. Apa yang sebaiknya kamu lakukan?",["You should clean it.","You should make it dirtier.","You shouldn't help.","You should throw more rubbish."],0,"Jika kelas kotor, kita sebaiknya membersihkannya. Clean berarti membersihkan."],
+["Which sentence gives a good suggestion?","Kalimat manakah yang memberikan saran baik?",["You shouldn't drink water.","You should get enough sleep.","You shouldn't take a bath.","You should eat too much candy."],1,"Mendapatkan tidur yang cukup adalah kebiasaan sehat. Kalimat tersebut menggunakan should untuk memberi saran."],
+["Should we clean our classroom every day?","Apakah kita sebaiknya membersihkan kelas setiap hari?",["Yes, we should.","Yes, we shouldn't.","No, we should.","No, we are."],0,"Jawaban positif untuk pertanyaan dengan should adalah Yes, subject + should."],
+["Which sentence is NOT correct?","Kalimat manakah yang TIDAK benar?",["You should drink water.","We should clean the room.","He should brushes his teeth.","They should take a bath."],2,"Kalimat C salah. Setelah should, gunakan Verb 1. Kalimat benar: He should brush his teeth."],
+["You are thirsty. What should you do?","Kamu haus. Apa yang sebaiknya kamu lakukan?",["You should drink water.","You shouldn't drink water.","You should stay dirty.","You shouldn't wash your hands."],0,"Ketika haus, kita sebaiknya minum air putih. Drink adalah Verb 1."]
+];
+let current=0,score=0,answered=false,chosen=[];
+const $=id=>document.getElementById(id);
+function render(){
+ const q=questions[current];answered=false;
+ $("counter").textContent=`Question ${current+1} of ${questions.length}`;
+ $("score").textContent=score;$("bar").style.width=`${current/questions.length*100}%`;
+ $("qtext").textContent=q[0];$("qtranslation").textContent=q[1];
+ $("options").innerHTML="";
+ q[2].forEach((opt,i)=>{let b=document.createElement("button");b.className="option";b.textContent=String.fromCharCode(65+i)+". "+opt;b.onclick=()=>answer(i);$("options").appendChild(b)});
+ $("feedback").className="feedback";$("feedback").innerHTML="";$("next").disabled=true;$("next").textContent=current===questions.length-1?"Lihat Hasil Akhir →":"Soal Berikutnya →";
+}
+function answer(i){
+ if(answered)return;answered=true;const q=questions[current],correct=i===q[3];chosen[current]=i;if(correct)score+=10;
+ [...$("options").children].forEach((b,n)=>{b.disabled=true;if(n===q[3])b.classList.add("correct");else if(n===i)b.classList.add("wrong")});
+ $("score").textContent=score;let f=$("feedback");f.className="feedback show "+(correct?"good":"bad");
+ f.innerHTML=`<b>${correct?"✅ Benar! Kamu hebat! +10 poin":"❌ Belum tepat. Yuk, pelajari lagi!"}</b><br><b>Jawaban benar: ${String.fromCharCode(65+q[3])}. ${q[2][q[3]]}</b><br><b>Pembahasan:</b> ${q[4]}`;
+ $("next").disabled=false;$("bar").style.width=`${(current+1)/questions.length*100}%`;
+}
+function nextQuestion(){if(!answered)return;if(current<questions.length-1){current++;render()}else finish()}
+function finish(){
+ $("quiz").classList.add("hide");$("result").classList.remove("hide");$("finalscore").textContent=score;
+ $("remark").textContent=score>=130?"Excellent! 🌟":score>=100?"Great Job! 🎉":score>=70?"Good Try! 👍":"Keep Practicing! 💪";
+ $("resulttext").textContent=`Jawaban benar: ${score/10} dari 15 soal. Jawaban salah: ${15-score/10} soal.`;
+ let review="<h3>📚 Kunci Jawaban & Pembahasan</h3>";
+ questions.forEach((q,i)=>{review+=`<details><summary>${i+1}. ${q[0]}</summary><p><b>Jawaban: ${String.fromCharCode(65+q[3])}. ${q[2][q[3]]}</b></p><p>${q[4]}</p></details>`});
+ $("review").innerHTML=review;$("answerkey").innerHTML=review;
+}
+function restartQuiz(){current=0;score=0;chosen=[];$("result").classList.add("hide");$("quiz").classList.remove("hide");render();window.scrollTo({top:0,behavior:"smooth"})}
+function showSection(id,btn){["game","materi","pembahasan"].forEach(x=>$(x).classList.toggle("hide",x!==id));document.querySelectorAll(".menu").forEach(x=>x.classList.remove("active"));if(btn)btn.classList.add("active")}
+render();
+</script>
+</body></html>
